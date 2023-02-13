@@ -2,7 +2,7 @@
     font-size: 62.5%;
     --main-dark-color: #0c0e19;
     --secondary-text-color: #685151;
-    --navbar-height: 60px;
+    --navbar-height: 70px;
 }
 html,body {
     font-size: 1.6rem;
@@ -15,6 +15,20 @@ html,body {
     overflow-x: hidden;
     width: 100vw;
 }
+
+h1 {
+    margin-top: 1rem;
+    font-family: 'lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--main-dark-color);
+}
+p, a {
+    font-family: 'inter', sans-serif;
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+
 /* ----------------- NAVIGATION ------------------*/
 
 nav {
@@ -53,8 +67,7 @@ main {
 /* --------------- HEADER SECTION ----------------- */
 
 .header-section {
-    margin-top: 2rem;
-    padding: 1.6rem;
+    padding: 2rem 16px 4rem 16px;
     position: relative;
     color: var(--main-dark-color);
 }
@@ -62,30 +75,27 @@ main {
     font-size: 30px;
     width: 250px;
     font-weight: 400;
+    color: var(--main-dark-color);
     font-family: 'Lato', sans-serif;
     margin: 1rem 1.6rem 1.6rem 1.6rem;
 }
-/* .part b{
-    /* font-size: 30px; */
-    /* font-weight: bold; */
-/* }  */
 .header-section > img {
     position: absolute;
     z-index: -1;
-    left: 150px;
+    right: -10px;
+    /* left: 150px; */
     /*TODO: knife spinning on media document width++*/
     top: -35px;
     rotate: 3deg;
 }
 .order-section {
     position: relative;
-    font-family: 'Inter', sans-serif;
-    font-weight: normal;
-    /* font-size: 16px; */
-    margin: 4rem 0;
+    margin-top: 4rem;
     width: 85%;
 }
 .order-section > p {
+    font-size: 16px;
+    color: var(--main-dark-color);
     margin-bottom: 1rem;
 }
 .order-section > a {
@@ -99,7 +109,7 @@ main {
 }
 .order-section img {
     position: absolute;
-    left: -150px;
+    left: -250px;
     top: -30px;
     width: 950px;
     height: 200px;
@@ -113,32 +123,25 @@ main {
     top: 7px;
 } 
 
-/* ------------ SECOND SECTION --------------- */
+/* ------------ DETAILS SECTION --------------- */
+
 .details-section {
-    margin: 0 16px;
+    margin: 2rem 16px 0 16px;
 }
-.details-section h1 {
-    margin-top: 1rem;
-    font-family: 'lato', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-}
+
 .details-section hr {
     width: 20%;
     background-color: var(--main-dark-color);
     height: 1.5px;
     margin: 0;
 }
-.details-section p {
-    font-family: 'inter', sans-serif;
-    font-size: 14px;
-    color: var(--secondary-text-color);
-}
+
 .img-with-crucials {
     display: flex;
     flex-flow: row nowrap;
     margin-top: 1rem;
 }
+
 .crucials {
     display: flex;
     flex-direction: column;
@@ -159,3 +162,72 @@ main {
     padding-bottom: 3px;
 }
 
+/* --------------------- COLORS SECTIONS ------------------------- */
+
+.product-colors {
+    margin: 5.6rem 16px 0 16px;
+    position: relative;
+}
+
+.blue-curve {
+    position: absolute;
+    left: -150px;
+    top: -60px;
+    z-index: -1;
+    height: 500px;
+}
+
+.colors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 220px;
+}
+
+.circles > div {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.circle-gradient {
+    background: linear-gradient(90deg, #81E1FF -7.87%, #BC7DE3 108.66%);
+}
+.circle-metal {
+    background: url('/images/metal_pattern.png'), rgba(255, 255, 255, 0.7);
+    opacity: 0.85;
+}
+.circle-dark {
+    background-color: var(--main-dark-color);
+}
+
+/* ---------------------- SOCIALS SECTION ----------------------- */
+
+.socials {
+    margin: 5rem 16px 2rem 16px;
+}
+
+.social-icons {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.social-icons > div {
+    border-radius: 10px;
+    width: 90px;
+    height: 100px;
+    background-color: var(--main-dark-color);
+    display: grid;
+    place-items: center;
+}
