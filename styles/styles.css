@@ -3,6 +3,7 @@
     --main-dark-color: #0c0e19;
     --secondary-text-color: #685151;
     --navbar-height: 70px;
+    --text-hover-color: rgb(62, 68, 118);
 }
 html,body {
     font-size: 1.6rem;
@@ -43,13 +44,15 @@ nav {
     backdrop-filter: blur(8px);
     background-color: rgba(255, 255, 255, 0.8);
 }
-nav ul {
+nav > ul {
     margin: 0;
-    padding: 1.6rem;
+    padding: 0 1.6rem;
+    height: 100%;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 ul li{
     display: flex;
@@ -57,7 +60,70 @@ ul li{
 }
 
 .svg-hamburgher *{
+    /* TODO: add a new animation to change hamburgher into minus/cross */
     border-radius: 5px;
+}
+
+.svg-hamburgher {
+    cursor: pointer;
+}
+
+.hidden-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 60px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.visible {
+    right: 0 !important;
+    opacity: 100%;
+    visibility: visible;
+    scroll-behavior: none;
+}
+
+.hidden-list {
+    transition: all 0.3s;
+    padding: 0 0 16px 0;
+    visibility:visible;
+    width: 80%;
+    margin: 0;
+    position: absolute;
+    right: -250px;
+    height: 100%;
+    opacity: 100% !important;
+    background-color: #eff3ff;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.hidden-list li {
+    height: 5.5rem;
+    width: 100%;
+}
+.hidden-list li:hover {
+    background-color: #cad7ff;
+}
+
+.hidden-menu a {
+    padding-left: 16px;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: var(--main-dark-color);
+    font-size: 2rem;
+    font-family: 'Lato';
+    display: flex;
+    align-items: center;
 }
 
 main {
@@ -82,10 +148,10 @@ main {
 .header-section > img {
     position: absolute;
     z-index: -1;
-    right: -10px;
+    right: -25px;
     /* left: 150px; */
     /*TODO: knife spinning on media document width++*/
-    top: -35px;
+    top: -30px;
     rotate: 3deg;
 }
 .order-section {
@@ -98,15 +164,6 @@ main {
     color: var(--main-dark-color);
     margin-bottom: 1rem;
 }
-.order-section > a {
-    border: 2px solid black;
-    border-radius: 4px;
-    padding: 10px 30px 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    color: var(--main-dark-color);
-    position: relative;
-}
 .order-section img {
     position: absolute;
     left: -250px;
@@ -115,13 +172,44 @@ main {
     height: 200px;
     z-index: -2;
 }
+.order-section > a {
+    border-radius: 4px;
+    padding: 12px 35px 12px 20px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    font-weight: bold;
+    color: var(--main-dark-color);
+    position: relative;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
 .order-section > a::after {
-    content: '>';
+    z-index: 0;
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f30b";
     position: absolute;
-    font-size: 20px;
-    right: 10px;
-    top: 7px;
+    font-size: 15px;
+    right: 12px;
+    top: 13.5px;
+    animation: welcomeSlide 0.4s ease-out;
+    transition: 0.3s ease-in-out;
 } 
+.order-section > a:hover, .order-section > a:hover::after {
+    color: var(--text-hover-color);
+}
+.order-section > a:hover::after{
+    right: 9px;
+}
+@keyframes welcomeSlide {
+    0% {
+        right: 40px;
+        opacity: 0%;
+    }
+    100% {
+        right: 12px;
+        opacity: 100%;
+    }
+}
 
 /* ------------ DETAILS SECTION --------------- */
 
@@ -132,6 +220,7 @@ main {
 .details-section hr {
     width: 20%;
     background-color: var(--main-dark-color);
+    border: none;
     height: 1.5px;
     margin: 0;
 }
@@ -154,7 +243,7 @@ main {
     flex-direction: column;
     text-align: center;
     margin: 0;
-    width: 80%;
+    width: 70%;
 }
 .crucials b {
     color: var(--main-dark-color);
@@ -230,4 +319,77 @@ main {
     background-color: var(--main-dark-color);
     display: grid;
     place-items: center;
+}
+
+.brand-icon {
+    font-size: 36px;
+    color: white;
+}
+
+/* ----------------------- SHOWTIME SECTION --------------------- */
+
+.showtime {
+    margin: 4rem 16px;
+}
+
+.showtime img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* ----------------------- FOOTER -------------------- */
+
+footer {
+    background-color: #eff3ff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding: 0 16px;
+}
+
+.temp {
+    padding: 16px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+}
+
+.social-links i {
+    color: var(--main-dark-color);
+}
+
+footer hr {
+    background-color: var(--main-dark-color);
+    height: 2px;
+    width: 100%;
+    margin: 0;
+    border: none;
+}
+
+.policies {
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.policies a{
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--main-dark-color);
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 10px;
+    color: rgb(158, 158, 158);
+    margin: 0 0 10px 0;
 }

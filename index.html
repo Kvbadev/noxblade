@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/75483acf86.js" crossorigin="anonymous"></script>
+    <script async type="module" src="scripts/app.js"></script>
     <title>Noxblade</title>
   </head>
   <body>
@@ -33,10 +35,19 @@
               <rect width="38" height="3" y="20" rx="2" ry="2" />
             </svg>
           </li>
+          <li class="item hidden-menu hidden">
+            <ul class="hidden-list hidden">
+              <li><a href="">Buy Now</a></li>
+              <li><a href="">Home</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <main>
         <section class="header-section">
+          <!--TODO: change the main gradient to sth lighter-->
           <img
             src="images/knife.png"
             width="250"
@@ -96,22 +107,41 @@
             <h1>You want to get into it?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae earum eligendi placeat, neque dicta necessitatibus aperiam velit quisquam repellat ipsa aliquam. At architecto laudantium nostrum minus culpa illo cupiditate?</p>
             <div class="social-icons">
-              <!--TODO: include fontawesome-->
               <div class="tiktok">
-                <img src="./images/tt-icon.png" alt="tiktok icon" width="30" />
+                <a href="https://tiktok.com"><i class="brand-icon fa-brands fa-tiktok"></i></a>
               </div>
               <div class="instagram">
-                <img src="./images/ig-icon.png" alt="instagram icon" width="30" />
+                <i class="brand-icon fa-brands fa-instagram"></i>
               </div>
               <div class="youtube">
-                <img src="./images/yt-icon.png" alt="youtube icon" width="30" />
+                <i class="brand-icon fa-brands fa-youtube"></i>
               </div>
             </div>
+          </section>
+          <section class="showtime">
+            <img src="images/balisong-tricks.gif" alt="what can you do with our product" />
           </section>
         </div>
       </main>
       <footer>
-
+        <div class="temp">
+          <div class="social-links">
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+          <img src="images/logo.png" alt="Noxblade logo" width="150">
+        </div>
+        <hr>
+        <div class="policies">
+          <a href="./shipping.html">Shipping</a>
+          <a href="./refunds.html">Refund Policy</a>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./newsletter.html">Newsletter</a>
+        </div>
+        <div class="copyright">
+          <p>NoxBlade 2023. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   </body>
