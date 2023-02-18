@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,height=device-height" />
+    <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +21,7 @@
       <nav>
         <ul class="navigation">
           <li class="item">
+            <a href="./index.html">
             <img
               src="images/logo.png"
               alt="Noxblade logo"
@@ -27,17 +29,16 @@
               height="20"
               class="logo"
             />
+            </a>
           </li>
-          <li class="item hamburgher">
-            <svg class="svg-hamburgher" width="40" height="25">
-              <rect width="38" height="3" rx="2" ry="2" />
-              <rect width="38" height="3" y="10" rx="2" ry="2" />
-              <rect width="38" height="3" y="20" rx="2" ry="2" />
-            </svg>
+          <li class="item hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
           </li>
           <li class="item hidden-menu hidden">
             <ul class="hidden-list hidden">
-              <li><a href="">Buy Now</a></li>
+              <li><a href="./checkout.html">Buy Now</a></li>
               <li><a href="">Home</a></li>
               <li><a href="">Contact</a></li>
               <li><a href="">FAQ</a></li>
@@ -47,18 +48,17 @@
       </nav>
       <main>
         <section class="header-section">
-          <!--TODO: change the main gradient to sth lighter-->
           <img
             src="images/knife.png"
             width="250"
             alt="Noxblade product"
             class="blade-image"
           />
-          <p class="header-text">
+          <h1 class="header-text">
             Your entrance to the completely <strong>new world.</strong>
-          </p>
+          </h1>
           <div class="order-section">
-            <img src="images/curve.png" />
+            <img src="images/curve2.png" />
             <p>
               Our new <b>NoxBlade</b> revolutionize the approach to learning how
               to use balisongs. Don’t wait, get yourself one before they’ll be all
@@ -68,10 +68,10 @@
           </div>
         </section>
           <section class="details-section">
-            <h1>
+            <h2>
               Learn event the most difficult tricks without putting yourself at
               risk.
-            </h1>
+            </h2>
             <hr />
             <p>
               The brand new NoxBlade is perfect for beginners, as 
@@ -92,7 +92,7 @@
           </section>
           <section class="product-colors">
             <img src="images/curve2.png" class="blue-curve"/>
-            <h1>Take your pick</h1>
+            <h2>Take your pick</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, quisquam laborum dolorem ducimus debitis aliquid suscipit reprehenderit alias quae, dolores iusto, vel temporibus eum accusamus saepe rem? Ipsum, dicta.</p>
             <div class="colors">
               <div class="circles">
@@ -104,7 +104,7 @@
             </div>
           </section>
           <section class="socials">
-            <h1>You want to get into it?</h1>
+            <h2>You want to get into it?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae earum eligendi placeat, neque dicta necessitatibus aperiam velit quisquam repellat ipsa aliquam. At architecto laudantium nostrum minus culpa illo cupiditate?</p>
             <div class="social-icons">
               <div class="tiktok">
@@ -124,7 +124,7 @@
         </div>
       </main>
       <footer>
-        <div class="temp">
+        <div class="higher-part">
           <div class="social-links">
             <i class="fa-brands fa-pinterest"></i>
             <i class="fa-brands fa-facebook"></i>

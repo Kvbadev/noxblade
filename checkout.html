@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/75483acf86.js"
+      crossorigin="anonymous"
+    ></script>
+    <script async type="module" src="scripts/app.js"></script>
+    <title>Checkout</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul class="navigation">
+          <li class="item">
+             <a href="./index.html">
+            <img
+              src="images/logo.png"
+              alt="Noxblade logo"
+              width="150"
+              height="20"
+              class="logo"
+            />
+            </a>
+          </li>
+          <li class="item hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </li>
+          <li class="item hidden-menu hidden">
+            <ul class="hidden-list hidden">
+              <li><a href="">Buy Now</a></li>
+              <li><a href="">Home</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <h1>Checkout</h1>
+        <!--TODO: add price in more visible place in index.html-->
+        <section class="product">
+            <img src="images/knife2.png" alt="Image of a product" width="80" height="80" />
+            <div class="text">
+                <p><strong>NoxBlade One</strong></p>
+                <p class="price">43.99$</p>
+            </div>
+            <span>
+                <div class="quantity">1</div>
+                <button class="adder"><i class="fa-solid fa-plus"></i></button>
+                <button class="subtractor" disabled><i class="fa-solid fa-minus"></i></button>
+            </span>
+        </section>
+      </main>
+      <footer>
+        <div class="temp">
+          <div class="social-links">
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+          <img src="images/logo.png" alt="Noxblade logo" width="150" />
+        </div>
+        <hr />
+        <div class="policies">
+          <a href="./shipping.html">Shipping</a>
+          <a href="./refunds.html">Refund Policy</a>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./newsletter.html">Newsletter</a>
+        </div>
+        <div class="copyright">
+          <p>NoxBlade 2023. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,8 @@
 export default class Menu {
-    constructor(container, menu) {
+    constructor(container, menu, button) {
         this.container = container;
         this.menu = menu;
+        this.button = button;
         this.status = false;
         
         this.menu.onclick = e => e.stopPropagation();
@@ -14,5 +15,6 @@ export default class Menu {
         this.status = !this.status;
 
         [this.container,this.menu].forEach(x => x.classList.toggle('visible'));
+        this.button.classList.toggle('is-active');
     }
 }
