@@ -25,14 +25,14 @@
       <nav>
         <ul class="navigation">
           <li class="item">
-             <a href="./index.html">
-            <img
-              src="images/logo.png"
-              alt="Noxblade logo"
-              width="150"
-              height="20"
-              class="logo"
-            />
+            <a href="./index.html">
+              <img
+                src="images/logo.png"
+                alt="Noxblade logo"
+                width="150"
+                height="20"
+                class="logo"
+              />
             </a>
           </li>
           <li class="item hamburger">
@@ -54,20 +54,53 @@
         <h1>Checkout</h1>
         <!--TODO: add price in more visible place in index.html-->
         <section class="product">
-            <img src="images/knife2.png" alt="Image of a product" width="80" height="80" />
-            <div class="text">
-                <p><strong>NoxBlade One</strong></p>
-                <p class="price">43.99$</p>
+          <img
+            src="images/knife2.png"
+            alt="Image of a product"
+            width="80"
+            height="80"
+          />
+          <div class="text">
+            <p><strong>NoxBlade One</strong></p>
+            <p class="price">43.99$</p>
+          </div>
+          <span>
+            <div class="quantity">1</div>
+            <button class="adder"><i class="fa-solid fa-plus"></i></button>
+            <button class="subtractor" disabled>
+              <i class="fa-solid fa-minus"></i>
+            </button>
+          </span>
+        </section>
+        <section class="progress-bar">
+          <div class="line"></div>
+          <div class="circle active"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </section>
+        <section class="form-container">
+          <h2>Contact Details</h2>
+          <form>
+            <label>First name</label>
+            <input name="first_name" placeholder="Harry" />
+            <label>Last name</label>
+            <input name="last_name" placeholder="Lebowski" />
+            <label>Phone</label>
+            <input name="phone" placeholder="773-2243-12" type="tel"/>
+            <label>Email</label>
+            <input name="email" placeholder="youraddress@email.com" type="email" />
+            <div class="buttons">
+              <button type="button" class="prev-button" disabled>Back</button>
+              <button type="submit" class="next-button">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-            <span>
-                <div class="quantity">1</div>
-                <button class="adder"><i class="fa-solid fa-plus"></i></button>
-                <button class="subtractor" disabled><i class="fa-solid fa-minus"></i></button>
-            </span>
+          </form>
         </section>
       </main>
       <footer>
-        <div class="temp">
+        <div class="higher-part">
           <div class="social-links">
             <i class="fa-brands fa-pinterest"></i>
             <i class="fa-brands fa-facebook"></i>

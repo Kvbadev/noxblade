@@ -1,4 +1,11 @@
 
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 100px 60px 1fr 24px;
+    align-items: center;
+}
+
 /* -------------------- PRODUCT SECTION -------------------- */
 
 .product {
@@ -6,7 +13,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--main-blue);
+    background-color: var(--light-blue);
     height: 8rem;
     padding: 0 8px 0 0;
     border-radius: 8px;
@@ -55,4 +62,104 @@ span button[disabled] {
     background-color: rgba(208, 208, 208, 0.2);
     color: rgb(167, 166, 166);
     cursor:not-allowed;
+}
+
+/* ------------------ PROGRESS BAR ---------------------- */
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.progress-bar .line {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translate(0, -50%);
+    background-color: var(--dark-blue);
+    height: 2px;
+    z-index: -1;
+    width: 0%;
+    transition: 0.3s all;
+}
+
+.progress-bar::before {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    background-color: var(--main-dark-color);
+    height: 2px;
+    z-index: -1;
+    width: 100%;
+}
+
+.progress-bar .circle {
+    border-radius: 100px;
+    border: 1px solid var(--main-dark-color);
+    width: 20px;
+    aspect-ratio: 1;
+    background-color: white;
+    transition: 1s all;
+}
+
+.progress-bar .circle.active {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+/* --------------- FORM SECTION ------------------- */
+
+.form-container {
+    width: calc(100% - 32px);
+    border-radius: 8px;
+    padding: 0 16px 16px 16px;
+    border: 1px solid black;
+    margin-top: 1rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.form-container input {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: 0 8px;
+    margin: 4px 0 16px 0;
+}
+
+.form-container label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--secondary-dark-color);
+}
+
+.form-container .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.form-container button {
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 40px;
+    width: 80px;
+    background-color: white;
+}
+
+.form-container button[type='submit'] {
+    font-size: 20px;
+    background-color: var(--light-blue);
+    width: 120px;
+    cursor: pointer;
 }

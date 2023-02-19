@@ -25,7 +25,7 @@ p,
 a {
   font-family: "inter", sans-serif;
   font-size: 14px;
-  color: var(--secondary-text-color);
+  color: var(--secondary-dark-color);
 }
 
 /* ----------------- NAVIGATION ------------------*/
@@ -91,7 +91,7 @@ nav > ul {
   right: -350px;
   height: 100%;
   opacity: 100% !important;
-  background-color: var(--main-blue);
+  background-color: var(--light-blue);
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -339,7 +339,7 @@ h1 {
 /* ----------------------- FOOTER -------------------- */
 
 footer {
-  background-color: var(--main-blue);
+  background-color: var(--light-blue);
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -409,7 +409,7 @@ footer hr {
   transform: translateY(-10px);
 }
 
-.line {
+.hamburger .line {
   width: 45px;
   height: 4px;
   background-color: var(--main-dark-color);
