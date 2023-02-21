@@ -17,7 +17,7 @@
       src="https://kit.fontawesome.com/75483acf86.js"
       crossorigin="anonymous"
     ></script>
-    <script async type="module" src="scripts/app.js"></script>
+    <script defer type="module" src="scripts/app.js"></script>
     <title>Checkout</title>
   </head>
   <body>
@@ -80,24 +80,93 @@
           <div class="circle"></div>
         </section>
         <section class="form-container">
-          <h2>Contact Details</h2>
           <form>
-            <label>First name</label>
-            <input name="first_name" placeholder="Harry" />
-            <label>Last name</label>
-            <input name="last_name" placeholder="Lebowski" />
-            <label>Phone</label>
-            <input name="phone" placeholder="773-2243-12" type="tel"/>
-            <label>Email</label>
-            <input name="email" placeholder="youraddress@email.com" type="email" />
+            <span class="input-group">
+              <h2>Contact Details</h2>
+              <label>First name</label>
+              <input name="first_name" placeholder="Harry" />
+              <label>Last name</label>
+              <input name="last_name" placeholder="Lebowski" />
+              <label>Phone</label>
+              <input name="phone" placeholder="773-2243-12" type="tel"/>
+              <label>Email</label>
+              <input name="email" placeholder="youraddress@email.com" type="email" />
+            </span>
+            <span class="input-group">
+              <h2>Shipping Address</h2>
+              <label>Country</label>
+              <input name="country" placeholder="United States of America" />
+              <label>City</label>
+              <input name="city" placeholder="Palo Alto, San Francisco" >
+              <label>ZIP Code</label>
+              <input name="zip_code" placeholder="20-200" type="text"/>
+              <label>Street</label>
+              <input name="street" placeholder="Franklin Harmendez 8478" type="email" />
+            </span>
+            <span class="input-group">
+              <h2>Payment Method</h2>
+              <div class="payment-method-span">
+                <input id="credit-card" checked="checked"type="radio" name="payemnt-method" value="card" />
+                <label for="credit-card" class="credit-card-image image-label"></label>
+                <input id="paypal" type="radio" name="payemnt-method" value="paypal" />
+                <label for="paypal" class="paypal-image image-label"></label>
+              </div>
+              <label>Name on the Card</label>
+              <input name="card_name" placeholder="Jan Lebowski" />
+              <label>Card Number</label>
+              <input name="card_number" placeholder="1111-1111-1111-1111" type="text"/>
+              <label>Expiry Date / CVV</label>
+              <span class="connected">
+                <input name="expiry_date" placeholder="01/22" type="text" />
+                <input name="cvv" placeholder="CVV" type="text" />
+              </span>
+            </span>
+            <span class="input-group summary">
+              <h2>Summary</h2>
+              <div class="segment">
+                <div class="header">
+                  <h3>Shipping to:</h3>
+                  <button>Edit</button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta voluptatum officia sapiente quaerat.</p>
+              </div>
+              <div class="segment">
+                <div class="header">
+                  <h3>Payment Details</h3>
+                  <button>Edit</button>
+                </div>
+                <p>XXXX-XXXX-XXXX-4333</p>
+              </div>
+              <div class="segment">
+                <div class="header">
+                  <h3>normal price</h3>
+                </div>
+                <p>43.99$ x2 = 60.99</p>
+              </div>
+              <div class="segment">
+                <div class="header">
+                  <h3>price after discount</h3>
+                </div>
+                <p>flskdflsdkflsd = 60.99$</p>
+              </div>
+              <div class="segment">
+                <div class="header">
+                  <h3>Price</h3>
+                  <p class="total-price">60.99$</p>
+                </div>
+              </div>
+            </span>
             <div class="buttons">
-              <button type="button" class="prev-button" disabled>Back</button>
-              <button type="submit" class="next-button">
+              <button type="button" disabled class="prev-button">
+                Back
+              </button>
+              <button type="submit" class="next-button" />
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </form>
         </section>
+
       </main>
       <footer>
         <div class="higher-part">

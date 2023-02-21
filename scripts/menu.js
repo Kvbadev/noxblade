@@ -1,7 +1,7 @@
 export default class Menu {
     constructor(container, menu, button) {
-        this.container = container;
-        this.menu = menu;
+        this.container = document.querySelector(container);
+        this.menu = document.querySelector(menu);
         this.button = button;
         this.status = false;
         
