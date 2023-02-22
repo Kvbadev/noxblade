@@ -11,6 +11,10 @@ body {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   overflow-x: hidden;
   width: 100vw;

@@ -84,13 +84,13 @@
             <span class="input-group">
               <h2>Contact Details</h2>
               <label>First name</label>
-              <input name="first_name" placeholder="Harry" />
+              <input required name="first_name" placeholder="Harry" />
               <label>Last name</label>
-              <input name="last_name" placeholder="Lebowski" />
+              <input required name="last_name" placeholder="Lebowski" />
               <label>Phone</label>
-              <input name="phone" placeholder="773-2243-12" type="tel"/>
+              <input required name="phone" placeholder="773-2243-12" type="tel"/>
               <label>Email</label>
-              <input name="email" placeholder="youraddress@email.com" type="email" />
+              <input required name="email" placeholder="youraddress@email.com" type="email" />
             </span>
             <span class="input-group">
               <h2>Shipping Address</h2>
@@ -126,14 +126,18 @@
               <div class="segment">
                 <div class="header">
                   <h3>Shipping to:</h3>
-                  <button>Edit</button>
+                  <button type="button" data-pos="1" class="btn-position">
+                    Edit
+                  </button>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta voluptatum officia sapiente quaerat.</p>
+                <p class="address-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta voluptatum officia sapiente quaerat.</p>
               </div>
               <div class="segment">
                 <div class="header">
                   <h3>Payment Details</h3>
-                  <button>Edit</button>
+                  <button type="button" data-pos="2" class="btn-position">
+                    Edit
+                  </button>
                 </div>
                 <p>XXXX-XXXX-XXXX-4333</p>
               </div>
@@ -152,8 +156,8 @@
               <div class="segment">
                 <div class="header">
                   <h3>Price</h3>
-                  <p class="total-price">60.99$</p>
                 </div>
+                <p class="total-price">60.99$</p>
               </div>
             </span>
             <div class="buttons">

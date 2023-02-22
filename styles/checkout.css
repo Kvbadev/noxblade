@@ -40,7 +40,6 @@ main {
     gap: 4px;
 }
 .product span button, .product span .quantity {
-    cursor: pointer;
     padding: none;
     border: none;
     width: 42px;
@@ -133,7 +132,7 @@ span button[disabled] {
     align-items: flex-end;
 }
 
-.form-container form > span {
+.form-container form > .input-group {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -187,7 +186,6 @@ span button[disabled] {
     font-size: 20px;
     background-color: var(--light-blue);
     width: 120px;
-    cursor: pointer;
 }
 
 .form-container .prev-button {
@@ -203,7 +201,7 @@ span button[disabled] {
 }
 
 .form-container h2 {
-    font-size: 24;
+    font-size: 24px;
     margin: 2rem 0;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -227,7 +225,7 @@ span button[disabled] {
 form .payment-method-span {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 4px 0 16px 0;
 }
 
@@ -246,11 +244,12 @@ form .credit-card-image {
 }
 form .paypal-image, .credit-card-image {
     width: 100%;
+    height: 60px !important;
     border: 1px solid black;
+    margin: 0 1rem !important;
 }
 
 .payment-method-span input:checked +.image-label {
-    filter: none;
     border: 1px solid var(--dark-blue);
     transition: 0.2s all;
 }
@@ -260,10 +259,6 @@ form .paypal-image, .credit-card-image {
     margin: 1rem;
     border-radius: 6px;
     cursor: pointer;
-}
-
-form .summary > div{
-    border: 1px solid black;
 }
 
 form .summary h3 {
@@ -277,7 +272,6 @@ form .summary .header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
 }
 form .summary .header button {
     width: 40px;
@@ -287,5 +281,20 @@ form .summary .header button {
 }
 
 form .summary p{
-    font-size: 10px !important;
+    margin: 0;
+}
+
+form .summary .segment .address-p{
+    font-size: 12px !important;
+}
+
+form .summary .segment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 62px;
+}
+
+form .summary .total-price {
+    font-size: 20px !important;
 }
