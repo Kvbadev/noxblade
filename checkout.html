@@ -18,6 +18,7 @@
       crossorigin="anonymous"
     ></script>
     <script defer type="module" src="scripts/app.js"></script>
+    <script defer type="module" src="scripts/checkout.js"></script>
     <title>Checkout</title>
   </head>
   <body>
@@ -84,24 +85,24 @@
             <span class="input-group">
               <h2>Contact Details</h2>
               <label>First name</label>
-              <input required name="first_name" placeholder="Harry" />
+              <input name="first_name" placeholder="Harry" />
               <label>Last name</label>
-              <input required name="last_name" placeholder="Lebowski" />
+              <input name="last_name" placeholder="Lebowski" />
               <label>Phone</label>
-              <input required name="phone" placeholder="773-2243-12" type="tel"/>
+              <input name="phone" placeholder="773-2243-12" type="tel"/>
               <label>Email</label>
-              <input required name="email" placeholder="youraddress@email.com" type="email" />
+              <input name="email" placeholder="youraddress@email.com" type="email" />
             </span>
             <span class="input-group">
               <h2>Shipping Address</h2>
               <label>Country</label>
-              <input name="country" placeholder="United States of America" />
+              <input class="shipping" name="country" placeholder="United States of America" />
               <label>City</label>
-              <input name="city" placeholder="Palo Alto, San Francisco" >
+              <input class="shipping" name="city" placeholder="Palo Alto, San Francisco" >
               <label>ZIP Code</label>
-              <input name="zip_code" placeholder="20-200" type="text"/>
+              <input class="shipping" name="zip_code" placeholder="20-200" type="text"/>
               <label>Street</label>
-              <input name="street" placeholder="Franklin Harmendez 8478" type="email" />
+              <input class="shipping" name="street" placeholder="Franklin Harmendez 8478" type="email" />
             </span>
             <span class="input-group">
               <h2>Payment Method</h2>
@@ -114,7 +115,7 @@
               <label>Name on the Card</label>
               <input name="card_name" placeholder="Jan Lebowski" />
               <label>Card Number</label>
-              <input name="card_number" placeholder="1111-1111-1111-1111" type="text"/>
+              <input class="payment-detail" name="card_number" placeholder="1111-1111-1111-1111" type="text"/>
               <label>Expiry Date / CVV</label>
               <span class="connected">
                 <input name="expiry_date" placeholder="01/22" type="text" />
@@ -130,7 +131,7 @@
                     Edit
                   </button>
                 </div>
-                <p class="address-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta voluptatum officia sapiente quaerat.</p>
+                <p class="address-p" data-source="shipping">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta voluptatum officia sapiente quaerat.</p>
               </div>
               <div class="segment">
                 <div class="header">
@@ -139,7 +140,7 @@
                     Edit
                   </button>
                 </div>
-                <p>XXXX-XXXX-XXXX-4333</p>
+                <p data-source="payment-detail">XXXX-XXXX-XXXX-4333</p>
               </div>
               <div class="segment">
                 <div class="header">
@@ -147,11 +148,9 @@
                 </div>
                 <p>43.99$ x2 = 60.99</p>
               </div>
-              <div class="segment">
-                <div class="header">
-                  <h3>price after discount</h3>
-                </div>
-                <p>flskdflsdkflsd = 60.99$</p>
+              <div class="discount-segment">
+                <h3>Discount code</h3>
+                <input class="discount-code" type="text">
               </div>
               <div class="segment">
                 <div class="header">
